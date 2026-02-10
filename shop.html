@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - Kavee Clothing</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#1a1a1a',
+                        secondary: '#f5f5f5',
+                        accent: '#c9a227',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-sans antialiased text-gray-800 bg-white selection:bg-accent selection:text-white">
+
+    <!-- Navigation (Same as Index) -->
+    <nav class="fixed w-full z-50 transition-all duration-300 bg-white/95 backdrop-blur-md shadow-sm" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="text-3xl font-bold tracking-tighter text-primary">
+                        KAVEE<span class="text-accent">CLOTHING</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html" class="text-gray-600 hover:text-accent font-medium transition-colors">Home</a>
+                    <a href="shop.html" class="text-primary hover:text-accent font-medium transition-colors">Shop</a>
+                    <a href="index.html#collections"
+                        class="text-gray-600 hover:text-accent font-medium transition-colors">Collections</a>
+                    <a href="about.html" class="text-gray-600 hover:text-accent font-medium transition-colors">About</a>
+                    <a href="contact.html"
+                        class="text-gray-600 hover:text-accent font-medium transition-colors">Contact</a>
+                </div>
+                <!-- Icons -->
+                <div class="hidden md:flex items-center space-x-6">
+                    <button class="text-gray-600 hover:text-accent transition-colors relative">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+                        </svg>
+                        <span
+                            class="absolute -top-2 -right-2 bg-accent text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">0</span>
+                    </button>
+                </div>
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-primary focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="index.html"
+                    class="block px-3 py-2 text-base font-medium text-accent bg-gray-50 rounded-md">Home</a>
+                <a href="shop.html"
+                    class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-accent hover:bg-gray-50 rounded-md">Shop</a>
+                <a href="about.html"
+                    class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-accent hover:bg-gray-50 rounded-md">About</a>
+                <a href="contact.html"
+                    class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-accent hover:bg-gray-50 rounded-md">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="bg-gray-100 pt-32 pb-16 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Our Collection</h1>
+        <p class="text-gray-500 max-w-2xl mx-auto px-4">Browse our exclusive range of premium clothing designed for
+            style and comfort.</p>
+    </header>
+
+    <!-- Shop Content -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row gap-8">
+
+            <!-- Sidebar Filters -->
+            <aside class="w-full md:w-64 flex-shrink-0">
+                <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100 sticky top-24">
+                    <h3 class="text-lg font-bold mb-4">Filters</h3>
+
+                    <div class="mb-6">
+                        <h4 class="font-medium mb-2 text-gray-700">Categories</h4>
+                        <div class="space-y-2">
+                            <label class="flex items-center cursor-pointer">
+                                <input type="checkbox"
+                                    class="form-checkbox text-accent h-4 w-4 rounded border-gray-300">
+                                <span class="ml-2 text-gray-600">Ladies</span>
+                            </label>
+                            <label class="flex items-center cursor-pointer">
+                                <input type="checkbox"
+                                    class="form-checkbox text-accent h-4 w-4 rounded border-gray-300">
+                                <span class="ml-2 text-gray-600">Gents</span>
+                            </label>
+                            <label class="flex items-center cursor-pointer">
+                                <input type="checkbox"
+                                    class="form-checkbox text-accent h-4 w-4 rounded border-gray-300">
+                                <span class="ml-2 text-gray-600">Unisex</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="mb-6">
+                        <h4 class="font-medium mb-2 text-gray-700">Size</h4>
+                        <div class="grid grid-cols-3 gap-2">
+                            <button
+                                class="border border-gray-300 py-1 px-2 rounded text-sm hover:border-accent hover:text-accent">S</button>
+                            <button
+                                class="border border-gray-300 py-1 px-2 rounded text-sm hover:border-accent hover:text-accent">M</button>
+                            <button
+                                class="border border-gray-300 py-1 px-2 rounded text-sm hover:border-accent hover:text-accent">L</button>
+                            <button
+                                class="border border-gray-300 py-1 px-2 rounded text-sm hover:border-accent hover:text-accent">XL</button>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4 class="font-medium mb-2 text-gray-700">Price Range</h4>
+                        <input type="range"
+                            class="w-full accent-accent h-1 bg-gray-200 rounded-lg appearance-none cursor-pointer">
+                        <div class="flex justify-between text-xs text-gray-500 mt-2">
+                            <span>LKR 1000</span>
+                            <span>LKR 20000</span>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Product Grid -->
+            <div class="flex-1">
+                <!-- Sorting/Results Header -->
+                <div class="flex justify-between items-center mb-8">
+                    <p class="text-gray-500 text-sm">Showing 1-9 of 24 results</p>
+                    <select
+                        class="border-gray-200 border rounded-md py-2 px-4 text-sm focus:ring-accent focus:border-accent">
+                        <option>Sort by: Popularity</option>
+                        <option>Newest Arrivals</option>
+                        <option>Price: Low to High</option>
+                        <option>Price: High to Low</option>
+                    </select>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Product Item 1 -->
+                    <div class="group">
+                        <div class="relative overflow-hidden rounded-lg bg-gray-100 mb-4 h-72">
+                            <img src="https://images.unsplash.com/photo-1539008835657-9e8e9680c956?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                                class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
+                            <button
+                                class="absolute bottom-4 right-4 bg-white p-2 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 hover:bg-accent hover:text-white">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <h4 class="text-base font-bold text-gray-900 group-hover:text-accent transition-colors">Velvet
+                            Evening Gown</h4>
+                        <p class="text-sm text-gray-500">Ladies</p>
+                        <p class="text-accent font-bold mt-1">LKR 8,500</p>
+                    </div>
+
+                    <!-- Product Item 2 -->
+                    <div class="group">
+                        <div class="relative overflow-hidden rounded-lg bg-gray-100 mb-4 h-72">
+                            <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                                class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
+                            <div
+                                class="absolute top-2 left-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">
+                                20% OFF</div>
+                            <button
+                                class="absolute bottom-4 right-4 bg-white p-2 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 hover:bg-accent hover:text-white">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <h4 class="text-base font-bold text-gray-900 group-hover:text-accent transition-colors">Linen
+                            Summer Shirt</h4>
+                        <p class="text-sm text-gray-500">Gents</p>
+                        <div class="flex gap-2">
+                            <p class="text-gray-400 line-through text-sm">LKR 4,000</p>
+                            <p class="text-accent font-bold">LKR 3,200</p>
+                        </div>
+                    </div>
+
+                    <!-- Product Item 3 -->
+                    <div class="group">
+                        <div class="relative overflow-hidden rounded-lg bg-gray-100 mb-4 h-72">
+                            <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                                class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
+                            <button
+                                class="absolute bottom-4 right-4 bg-white p-2 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 hover:bg-accent hover:text-white">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <h4 class="text-base font-bold text-gray-900 group-hover:text-accent transition-colors">Graphic
+                            Print Tee</h4>
+                        <p class="text-sm text-gray-500">Unisex</p>
+                        <p class="text-accent font-bold mt-1">LKR 2,200</p>
+                    </div>
+
+                    <!-- Product Item 4 -->
+                    <div class="group">
+                        <div class="relative overflow-hidden rounded-lg bg-gray-100 mb-4 h-72">
+                            <img src="https://images.unsplash.com/photo-1551488852-080175b25291?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                                class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
+                            <button
+                                class="absolute bottom-4 right-4 bg-white p-2 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 hover:bg-accent hover:text-white">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <h4 class="text-base font-bold text-gray-900 group-hover:text-accent transition-colors">Slim Fit
+                            Chinos</h4>
+                        <p class="text-sm text-gray-500">Gents</p>
+                        <p class="text-accent font-bold mt-1">LKR 4,900</p>
+                    </div>
+
+                    <!-- Product Item 5 -->
+                    <div class="group">
+                        <div class="relative overflow-hidden rounded-lg bg-gray-100 mb-4 h-72">
+                            <img src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                                class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
+                            <div
+                                class="absolute top-2 left-2 bg-green-500 text-white text-xs font-bold px-2 py-1 rounded">
+                                NEW</div>
+                            <button
+                                class="absolute bottom-4 right-4 bg-white p-2 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 hover:bg-accent hover:text-white">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <h4 class="text-base font-bold text-gray-900 group-hover:text-accent transition-colors">Black
+                            Oversized Tee</h4>
+                        <p class="text-sm text-gray-500">Unisex</p>
+                        <p class="text-accent font-bold mt-1">LKR 2,500</p>
+                    </div>
+
+                    <!-- Product Item 6 -->
+                    <div class="group">
+                        <div class="relative overflow-hidden rounded-lg bg-gray-100 mb-4 h-72">
+                            <img src="https://images.unsplash.com/photo-1596783074918-c84cb06531ca?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                                class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
+                            <button
+                                class="absolute bottom-4 right-4 bg-white p-2 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 hover:bg-accent hover:text-white">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <h4 class="text-base font-bold text-gray-900 group-hover:text-accent transition-colors">Bohemian
+                            Skirt</h4>
+                        <p class="text-sm text-gray-500">Ladies</p>
+                        <p class="text-accent font-bold mt-1">LKR 3,600</p>
+                    </div>
+
+                </div>
+
+                <!-- Pagination -->
+                <div class="flex justify-center mt-12 space-x-2">
+                    <button class="px-4 py-2 bg-accent text-white rounded-md">1</button>
+                    <button class="px-4 py-2 bg-gray-100 text-gray-600 rounded-md hover:bg-gray-200">2</button>
+                    <button class="px-4 py-2 bg-gray-100 text-gray-600 rounded-md hover:bg-gray-200">3</button>
+                    <span class="px-2 py-2 text-gray-400">...</span>
+                    <button class="px-4 py-2 bg-gray-100 text-gray-600 rounded-md hover:bg-gray-200">Next</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Same as Index) -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <h3 class="text-2xl font-bold mb-6 text-white">KAVEE<span class="text-accent">CLOTHING</span></h3>
+                    <p class="text-gray-400 mb-6">Premium fashion destination for modern lifestyle. Quality meets
+                        elegance in every stitch.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-6 uppercase tracking-wider">Shop</h4>
+                    <ul class="space-y-4 text-gray-400">
+                        <li><a href="#" class="hover:text-accent transition-colors">Ladies</a></li>
+                        <li><a href="#" class="hover:text-accent transition-colors">Gents</a></li>
+                        <li><a href="#" class="hover:text-accent transition-colors">Unisex</a></li>
+                        <li><a href="#" class="hover:text-accent transition-colors">New Arrivals</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-6 uppercase tracking-wider">Company</h4>
+                    <ul class="space-y-4 text-gray-400">
+                        <li><a href="about.html" class="hover:text-accent transition-colors">About Us</a></li>
+                        <li><a href="contact.html" class="hover:text-accent transition-colors">Contact</a></li>
+                        <li><a href="#" class="hover:text-accent transition-colors">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-6 uppercase tracking-wider">Contact</h4>
+                    <ul class="space-y-4 text-gray-400">
+                        <li>No. 123, Fashion Street, Colombo</li>
+                        <li>+94 11 234 5678</li>
+                        <li>hello@kaveeclothing.lk</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-500 text-sm">
+                <p>&copy; 2024 Kavee Clothing. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

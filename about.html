@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Kavee Clothing</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#1a1a1a',
+                        secondary: '#f5f5f5',
+                        accent: '#c9a227',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-sans antialiased text-gray-800 bg-white selection:bg-accent selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-300 bg-white/95 backdrop-blur-md shadow-sm" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="text-3xl font-bold tracking-tighter text-primary">
+                        KAVEE<span class="text-accent">CLOTHING</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html" class="text-gray-600 hover:text-accent font-medium transition-colors">Home</a>
+                    <a href="shop.html" class="text-gray-600 hover:text-accent font-medium transition-colors">Shop</a>
+                    <a href="index.html#collections"
+                        class="text-gray-600 hover:text-accent font-medium transition-colors">Collections</a>
+                    <a href="about.html" class="text-primary hover:text-accent font-medium transition-colors">About</a>
+                    <a href="contact.html"
+                        class="text-gray-600 hover:text-accent font-medium transition-colors">Contact</a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-primary focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="index.html"
+                    class="block px-3 py-2 text-base font-medium text-accent bg-gray-50 rounded-md">Home</a>
+                <a href="shop.html"
+                    class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-accent hover:bg-gray-50 rounded-md">Shop</a>
+                <a href="about.html"
+                    class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-accent hover:bg-gray-50 rounded-md">About</a>
+                <a href="contact.html"
+                    class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-accent hover:bg-gray-50 rounded-md">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="bg-gray-100 pt-32 pb-16 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Our Story</h1>
+        <p class="text-gray-500 max-w-2xl mx-auto px-4">Crafting elegance since 2010.</p>
+    </header>
+
+    <!-- Story Section -->
+    <section class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="w-full md:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+                        alt="About Us" class="rounded-lg shadow-xl w-full">
+                </div>
+                <div class="w-full md:w-1/2">
+                    <h2 class="text-3xl font-bold mb-6 text-primary">Redefining Fashion in Sri Lanka</h2>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        At Kavee Clothing, we believe that fashion is more than just clothes—it's a statement. Founded
+                        with a vision to bring premium, high-quality apparel to the local market, we have grown into a
+                        brand synonymous with elegance and style.
+                    </p>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Our collections are carefully curated to ensure that every piece meets our strict standards of
+                        quality. From casual wear to formal attire, for ladies, gents, and everyone in between, we cater
+                        to the diverse fashion needs of our customers.
+                    </p>
+                    <div class="grid grid-cols-2 gap-6 mt-8">
+                        <div>
+                            <h4 class="text-4xl font-bold text-accent mb-2">10+</h4>
+                            <p class="text-gray-500">Years of Excellence</p>
+                        </div>
+                        <div>
+                            <h4 class="text-4xl font-bold text-accent mb-2">50k+</h4>
+                            <p class="text-gray-500">Happy Customers</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values -->
+    <section class="py-20 bg-secondary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Why Choose Us</h2>
+                <div class="w-24 h-1 bg-accent mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div
+                    class="bg-white p-8 rounded-lg shadow-md text-center hover:-translate-y-2 transition-transform duration-300">
+                    <div
+                        class="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6 text-accent">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Premium Quality</h3>
+                    <p class="text-gray-600">We source the finest fabrics to ensure durability and comfort in every
+                        stitch.</p>
+                </div>
+                <div
+                    class="bg-white p-8 rounded-lg shadow-md text-center hover:-translate-y-2 transition-transform duration-300">
+                    <div
+                        class="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6 text-accent">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Latest Trends</h3>
+                    <p class="text-gray-600">Our designs are inspired by global fashion trends, keeping you ahead of the
+                        curve.</p>
+                </div>
+                <div
+                    class="bg-white p-8 rounded-lg shadow-md text-center hover:-translate-y-2 transition-transform duration-300">
+                    <div
+                        class="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6 text-accent">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Customer First</h3>
+                    <p class="text-gray-600">Your satisfaction is our priority. We offer seamless returns and excellent
+                        support.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center text-gray-500 text-sm">
+                <p>&copy; 2024 Kavee Clothing. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
